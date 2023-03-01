@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Script to Change the background color randomly after every 1 mins</h1>
+    <script>
+        function UDAY() {
+            let ff1 = Math.floor(Math.random() * 100)
+            let ff2 = Math.floor(Math.random() * 100)
+            let ff3 = Math.floor(Math.random() * 100)
+            console.log(ff1)
+            document.body.style.backgroundColor = "#" + ff1 + ff2 + ff3
+        }
+        // document.body.style.backgroundColor = "pink"
+        setInterval(UDAY, 1000);
+    </script>
+</body>
+
+</html>

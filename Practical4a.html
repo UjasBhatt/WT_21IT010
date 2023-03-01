@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spural Form Detail</h1>
+    <h4></h4>
+    <table id="t"></table>
+    <button id="show">Details</button>
+    <style>
+        table,
+        tr,
+        td {
+            border: 10px solid rgb(192, 198, 255);
+        }
+    </style>
+    <script>
+        let srui = {
+            Name: "Ujas",
+            Branch: "IT",
+            Id: "21IT010",
+            Semesters: '4th',
+        }
+        let tbl = document.getElementById("t");
+
+        function uday() {
+            Object.entries(srui).forEach(([key, value]) => {
+                var tr = document.createElement('tr');
+                var td = document.createElement('td');
+                td.innerHTML = key;
+                tr.appendChild(td);
+                tbl.appendChild(tr);
+                td = document.createElement('td');
+                td.innerHTML = value;
+                tr.appendChild(td);
+                tbl.appendChild(tr);
+            });
+        }
+        let btn = document.getElementById('show');
+        btn.onclick = () => {
+            uday()
+        }
+    </script>
+</body>
+
+</html>
